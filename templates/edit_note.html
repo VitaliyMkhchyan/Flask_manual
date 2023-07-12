@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Редактирование заметки
+{% endblock %}
+
+{% block body %}
+<form method="POST">
+    <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="{{ note.title }}"><br>
+    <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="{{ note.description }}"><br>
+    <input type="submit" class="btn btn-primary" value="Submit">
+    <a type="submit" class="btn btn-danger" href="/edit_note/{{ note.id }}/delete">Remove</a><br>
+</form>
+{% endblock%}
